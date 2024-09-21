@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Athul Sukumaran - Frontend Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">Portfolio.</div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <div class="content">
+                <div class="text-content">
+                    <h1>Hi, I'm Athul</h1>
+                    <h2>Web Developer|html|css|javascript|react|node.js|java|mongodb</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit, minus consequatur accusantium inventore autem veritatis quas aperiam corrupti voluptatibus cumque.</p>
+                    <button class="hire-me">Hire Me</button>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="image-content">
+                    <img src="athul_sukumaran.jpg" alt="Athul Sukumaran" class="profile-image">
+                </div>
+            </div>
+        </main>
+        <!-- Add this inside the <main> element, after the existing content -->
+        <section id="skills" class="skills-section hidden">
+            <button class="close-btn">&times;</button>
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-item" data-skill="HTML">
+                    <img src="html-icon.png" alt="HTML">
+                    <p>HTML</p>
+                </div>
+                <div class="skill-item" data-skill="CSS">
+                    <img src="css-icon.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
+                <div class="skill-item" data-skill="JavaScript">
+                    <img src="js-icon.png" alt="JavaScript">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill-item" data-skill="React">
+                    <img src="react-icon.png" alt="React">
+                    <p>React</p>
+                </div>
+                <div class="skill-item" data-skill="Node.js">
+                    <img src="nodejs-icon.png" alt="Node.js">
+                    <p>Node.js</p>
+                </div>
+                <div class="skill-item" data-skill="Java">
+                    <img src="java-icon.png" alt="Java">
+                    <p>Java</p>
+                </div>
+                <div class="skill-item" data-skill="Express">
+                    <img src="express-icon.png" alt="Express">
+                    <p>Express</p>
+                </div>
+            </div>
+        </section>
+        <!-- Add this after the skills section -->
+        <section id="about" class="about-section hidden">
+            <button class="close-btn">&times;</button>
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="athul_sukumaran.jpg" alt="Athul Sukumaran" class="about-image">
+                <div class="about-text">
+                    <h3>Frontend Developer & Designer</h3>
+                    <p>Hello! I'm Athul Sukumaran, a passionate frontend developer with a keen eye for design. I specialize in creating responsive and user-friendly web applications using modern technologies.</p>
+                    <p>With a strong foundation in HTML, CSS, and JavaScript, I enjoy bringing designs to life and creating seamless user experiences. I'm always eager to learn new technologies and stay up-to-date with the latest trends in web development.</p>
+                    <p>When I'm not coding, you can find me exploring new design trends, contributing to open-source projects, or enjoying a good book on technology and innovation.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Add this after the about section -->
+        <section id="works" class="works-section hidden">
+            <button class="close-btn">&times;</button>
+            <h2>My Works</h2>
+            <div class="works-container">
+                <div class="work-item">
+                    <img src="project1.jpg" alt="Project 1">
+                    <h3>Project 1</h3>
+                    <p>Description of Project 1</p>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+                <div class="work-item">
+                    <img src="project2.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2</p>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+                <div class="work-item">
+                    <img src="project3.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3</p>
+                    <a href="#" class="view-project">View Project</a>
+                </div>
+            </div>
+        </section>
+        <!-- Add this after the works section -->
+        <section id="contact" class="contact-section hidden">
+            <button class="close-btn">&times;</button>
+            <h2>Contact Me</h2>
+            <div class="contact-content">
+                <p>Feel free to reach out to me for any inquiries or opportunities.</p>
+                <a href="mailto:athulsukuamaran457@gmail.com" class="contact-button">Send Email</a>
+            </div>
+        </section>
+        
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
