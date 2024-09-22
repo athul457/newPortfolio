@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Typing effect for the job title and skills
     const jobTitle = document.querySelector('h2');
-    const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Java', 'MongoDB'];
+    const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Java', 'MongoDB','Spring','Tailwind','MySQL','Express'];
     let currentSkillIndex = 0;
     let isDeleting = false;
     let text = '';
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             text = currentSkill.substring(0, text.length + 1);
         }
 
-        jobTitle.textContent = `Frontend Developer | ${text}`;
+        jobTitle.textContent = `Web Developer | ${text}`;
 
         if (!isDeleting && text === currentSkill) {
             isDeleting = true;
