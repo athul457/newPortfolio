@@ -3,13 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const navLinks = document.querySelectorAll('.nav-links a');
     const mainSection = document.querySelector('main');
     const skillsSection = document.getElementById('skills');
-    const closeBtn = skillsSection.querySelector('.close-btn');
     const aboutSection = document.getElementById('about');
-    const aboutCloseBtn = aboutSection.querySelector('.close-btn');
     const worksSection = document.getElementById('works');
-    const worksCloseBtn = worksSection.querySelector('.close-btn');
     const contactSection = document.getElementById('contact');
-    const contactCloseBtn = contactSection.querySelector('.close-btn');
+    const closeButtons = document.querySelectorAll('.close-btn');
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -34,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Typing effect for the job title and skills
     const jobTitle = document.querySelector('h2');
-    const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Java', 'MongoDB','Spring','Tailwind','MySQL','Express'];
+    const skills = ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Java', 'MongoDB', 'Spring', 'Tailwind', 'MySQL', 'Express'];
     let currentSkillIndex = 0;
     let isDeleting = false;
     let text = '';
@@ -96,18 +93,27 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Close button functionality
-    closeBtn.addEventListener('click', () => closeSection(skillsSection));
-    aboutCloseBtn.addEventListener('click', () => closeSection(aboutSection));
-    worksCloseBtn.addEventListener('click', () => closeSection(worksSection));
-    contactCloseBtn.addEventListener('click', () => closeSection(contactSection));
+    closeButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            event.stopPropagation();
+            closeSection(button.parentElement);
+        });
+    });
+
+    // Click on blank area to close section and return to home page
+    const sections = [skillsSection, aboutSection, worksSection, contactSection];
+    sections.forEach(section => {
+        section.addEventListener('click', (event) => {
+            if (event.target === section) {
+                closeSection(section);
+            }
+        });
+    });
 
     // Escape key functionality
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') {
-            closeSection(skillsSection);
-            closeSection(aboutSection);
-            closeSection(worksSection);
-            closeSection(contactSection);
+            sections.forEach(section => closeSection(section));
         }
     });
 
